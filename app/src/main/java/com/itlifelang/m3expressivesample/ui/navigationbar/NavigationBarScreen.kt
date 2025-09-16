@@ -24,12 +24,15 @@ import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationItemIconPosition
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.ShortNavigationBar
+import androidx.compose.material3.ShortNavigationBarArrangement
+import androidx.compose.material3.ShortNavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.material3.animateFloatingActionButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
@@ -43,11 +46,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.window.core.layout.WindowSizeClass
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
-fun NavigationBarScreen() {
+fun NavigationBarScreen(
+    windowSizeClass: WindowSizeClass = currentWindowAdaptiveInfo().windowSizeClass
+) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
     var selectedItem by remember { mutableIntStateOf(0) }
     val items = listOf("Songs", "Artists", "Playlists", "Profile", "Setting")
@@ -71,6 +78,10 @@ fun NavigationBarScreen() {
         derivedStateOf { listState.firstVisibleItemIndex != 0 }
     }
 
+    val isMediumSize = remember(windowSizeClass) {
+        windowSizeClass.isWidthAtLeastBreakpoint(WindowSizeClass.WIDTH_DP_MEDIUM_LOWER_BOUND)
+    }
+
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
@@ -84,9 +95,20 @@ fun NavigationBarScreen() {
             )
         },
         bottomBar = {
-            NavigationBar {
+            ShortNavigationBar(
+                arrangement = if (!isMediumSize) {
+                    ShortNavigationBarArrangement.EqualWeight
+                } else {
+                    ShortNavigationBarArrangement.Centered
+                }
+            ) {
                 items.forEachIndexed { index, item ->
-                    NavigationBarItem(
+                    ShortNavigationBarItem(
+                        iconPosition = if (!isMediumSize) {
+                            NavigationItemIconPosition.Top
+                        } else {
+                            NavigationItemIconPosition.Start
+                        },
                         selected = selectedItem == index,
                         onClick = { selectedItem = index },
                         icon = {
@@ -162,7 +184,6 @@ fun NavigationBarScreen() {
                                     contentDescription = null
                                 )
                             }
-
                         },
                         label = { Text(item) }
                     )
@@ -207,4 +228,16 @@ fun NavigationBarScreen() {
             }
         }
     }
+}
+
+@Preview(showBackground = true, widthDp = 400, heightDp = 600)
+@Composable
+fun NavigationBarScreenCompactPreview() {
+    NavigationBarScreen()
+}
+
+@Preview(showBackground = true, widthDp = 1200, heightDp = 600)
+@Composable
+fun NavigationBarScreenMediumPreview() {
+    NavigationBarScreen()
 }

@@ -29,18 +29,29 @@ data class ButtonType(val title: String) : AppNavKey(title)
 @Serializable
 data class SplitButton(val title: String): AppNavKey(title)
 
+@Serializable
 data class ButtonGroup(val title: String): AppNavKey(title)
 
+@Serializable
 data class FabButton(val title: String): AppNavKey(title)
 
+@Serializable
 data class ExtendedFabButton(val title: String): AppNavKey(title)
 
+@Serializable
 data class FabMenu(val title: String): AppNavKey(title)
 
 // Indicator
+@Serializable
 data class LoadingIndicator(val title: String): AppNavKey(title)
 
+@Serializable
 data class ProgressIndicator(val title: String): AppNavKey(title)
 
 // Navigation bar
+@Serializable
 data class NavigationBar(val title: String): AppNavKey(title)
+
+// Navigation rail
+@Serializable
+data class NavigationRail(val title: String): AppNavKey(title)
