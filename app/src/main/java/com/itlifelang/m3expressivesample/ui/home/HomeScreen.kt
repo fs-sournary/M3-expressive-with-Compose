@@ -34,6 +34,9 @@ import com.itlifelang.m3expressivesample.navigation.ButtonGroup
 import com.itlifelang.m3expressivesample.navigation.ExtendedFabButton
 import com.itlifelang.m3expressivesample.navigation.FabButton
 import com.itlifelang.m3expressivesample.navigation.FabMenu
+import com.itlifelang.m3expressivesample.navigation.LoadingIndicator
+import com.itlifelang.m3expressivesample.navigation.NavigationBar
+import com.itlifelang.m3expressivesample.navigation.ProgressIndicator
 import com.itlifelang.m3expressivesample.navigation.SmallAppBar
 import com.itlifelang.m3expressivesample.util.actions
 
@@ -139,5 +142,12 @@ private val widgets: Map<String, List<AppNavKey>> = mapOf(
         FabButton("Fab button"),
         ExtendedFabButton("Extended fab button"),
         FabMenu("Fab menu")
+    ),
+    "Indicator" to listOf(
+        LoadingIndicator("Loading indicator"),
+        ProgressIndicator("Progress indicator")
+    ),
+    "Navigation bar" to listOf(
+        NavigationBar("Navigation bar")
     )
 )

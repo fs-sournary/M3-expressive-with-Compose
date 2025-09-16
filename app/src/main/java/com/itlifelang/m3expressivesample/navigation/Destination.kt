@@ -36,3 +36,11 @@ data class FabButton(val title: String): AppNavKey(title)
 data class ExtendedFabButton(val title: String): AppNavKey(title)
 
 data class FabMenu(val title: String): AppNavKey(title)
+
+// Indicator
+data class LoadingIndicator(val title: String): AppNavKey(title)
+
+data class ProgressIndicator(val title: String): AppNavKey(title)
+
+// Navigation bar
+data class NavigationBar(val title: String): AppNavKey(title)
