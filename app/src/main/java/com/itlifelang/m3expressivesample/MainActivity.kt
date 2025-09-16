@@ -18,8 +18,10 @@ import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
+import com.itlifelang.m3expressivesample.navigation.Badge
 import com.itlifelang.m3expressivesample.navigation.ButtonGroup
 import com.itlifelang.m3expressivesample.navigation.ButtonType
+import com.itlifelang.m3expressivesample.navigation.Card
 import com.itlifelang.m3expressivesample.navigation.ExtendedFabButton
 import com.itlifelang.m3expressivesample.navigation.FabButton
 import com.itlifelang.m3expressivesample.navigation.FabMenu
@@ -31,22 +33,27 @@ import com.itlifelang.m3expressivesample.navigation.NavigationBar
 import com.itlifelang.m3expressivesample.navigation.NavigationRail
 import com.itlifelang.m3expressivesample.navigation.ProgressIndicator
 import com.itlifelang.m3expressivesample.navigation.SearchWithAppBar
+import com.itlifelang.m3expressivesample.navigation.Slider
 import com.itlifelang.m3expressivesample.navigation.SplitButton
 import com.itlifelang.m3expressivesample.ui.appbar.AppBarWithSearchScreen
 import com.itlifelang.m3expressivesample.ui.appbar.LargeFlexibleTopAppBarScreen
 import com.itlifelang.m3expressivesample.ui.appbar.MediumFlexibleTopAppBarScreen
+import com.itlifelang.m3expressivesample.ui.badge.BadgeScreen
 import com.itlifelang.m3expressivesample.ui.button.ButtonGroupScreen
 import com.itlifelang.m3expressivesample.ui.button.ButtonTypeScreen
 import com.itlifelang.m3expressivesample.ui.button.ExtendedFabButtonScreen
 import com.itlifelang.m3expressivesample.ui.button.FabButtonScreen
 import com.itlifelang.m3expressivesample.ui.button.FabMenuScreen
 import com.itlifelang.m3expressivesample.ui.button.SplitButtonScreen
+import com.itlifelang.m3expressivesample.ui.card.CardScreen
 import com.itlifelang.m3expressivesample.ui.home.HomeScreen
 import com.itlifelang.m3expressivesample.ui.indicator.LoadingIndicatorScreen
 import com.itlifelang.m3expressivesample.ui.indicator.ProgressIndicatorScreen
 import com.itlifelang.m3expressivesample.ui.navigationbar.NavigationBarScreen
 import com.itlifelang.m3expressivesample.ui.navigationrail.NavigationRailScreen
+import com.itlifelang.m3expressivesample.ui.slider.SliderScreen
 import com.itlifelang.m3expressivesample.ui.theme.M3ExpressiveSampleTheme
+import java.util.Map.entry
 
 
 class MainActivity : ComponentActivity() {
@@ -94,6 +101,16 @@ class MainActivity : ComponentActivity() {
                             LargeFlexibleTopAppBarScreen()
                         }
 
+                        // Badge
+                        entry<Badge> {
+                            BadgeScreen()
+                        }
+
+                        // Card
+                        entry<Card> {
+                            CardScreen()
+                        }
+
                         // Button
                         entry<ButtonType> {
                             ButtonTypeScreen()
@@ -130,6 +147,11 @@ class MainActivity : ComponentActivity() {
                         // Entry
                         entry<NavigationRail> {
                             NavigationRailScreen()
+                        }
+
+                        // Slider
+                        entry<Slider> {
+                            SliderScreen()
                         }
                     },
                     transitionSpec = {
