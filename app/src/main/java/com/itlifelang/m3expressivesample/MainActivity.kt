@@ -28,6 +28,7 @@ import com.itlifelang.m3expressivesample.navigation.LargeFlexibleAppBar
 import com.itlifelang.m3expressivesample.navigation.LoadingIndicator
 import com.itlifelang.m3expressivesample.navigation.MediumFlexibleAppBar
 import com.itlifelang.m3expressivesample.navigation.NavigationBar
+import com.itlifelang.m3expressivesample.navigation.NavigationRail
 import com.itlifelang.m3expressivesample.navigation.ProgressIndicator
 import com.itlifelang.m3expressivesample.navigation.SearchWithAppBar
 import com.itlifelang.m3expressivesample.navigation.SplitButton
@@ -44,6 +45,7 @@ import com.itlifelang.m3expressivesample.ui.home.HomeScreen
 import com.itlifelang.m3expressivesample.ui.indicator.LoadingIndicatorScreen
 import com.itlifelang.m3expressivesample.ui.indicator.ProgressIndicatorScreen
 import com.itlifelang.m3expressivesample.ui.navigationbar.NavigationBarScreen
+import com.itlifelang.m3expressivesample.ui.navigationrail.NavigationRailScreen
 import com.itlifelang.m3expressivesample.ui.theme.M3ExpressiveSampleTheme
 
 
@@ -123,6 +125,11 @@ class MainActivity : ComponentActivity() {
                         // Entry
                         entry<NavigationBar> {
                             NavigationBarScreen()
+                        }
+
+                        // Entry
+                        entry<NavigationRail> {
+                            NavigationRailScreen()
                         }
                     },
                     transitionSpec = {
