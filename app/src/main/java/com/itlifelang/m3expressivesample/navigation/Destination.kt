@@ -55,3 +55,7 @@ data class NavigationBar(val title: String): AppNavKey(title)
 // Navigation rail
 @Serializable
 data class NavigationRail(val title: String): AppNavKey(title)
+
+// Slider
+@Serializable
+data class Slider(val title: String): AppNavKey(title)
