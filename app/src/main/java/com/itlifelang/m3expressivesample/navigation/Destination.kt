@@ -13,6 +13,14 @@ open class AppNavKey(val name: String): NavKey
 @Serializable
 data class SearchWithAppBar(val title: String) : AppNavKey(title)
 
+// Badge
+@Serializable
+data class Badge(val title: String): AppNavKey(title)
+
+// Card
+@Serializable
+data class Card(val title: String): AppNavKey(title)
+
 @Serializable
 data class SmallAppBar(val title: String): AppNavKey(title)
 
@@ -55,3 +63,7 @@ data class NavigationBar(val title: String): AppNavKey(title)
 // Navigation rail
 @Serializable
 data class NavigationRail(val title: String): AppNavKey(title)
+
+// Slider
+@Serializable
+data class Slider(val title: String): AppNavKey(title)

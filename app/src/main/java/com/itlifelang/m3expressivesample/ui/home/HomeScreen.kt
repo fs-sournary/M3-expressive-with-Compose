@@ -25,12 +25,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.itlifelang.m3expressivesample.navigation.AppNavKey
+import com.itlifelang.m3expressivesample.navigation.Badge
 import com.itlifelang.m3expressivesample.navigation.ButtonType
 import com.itlifelang.m3expressivesample.navigation.SplitButton
 import com.itlifelang.m3expressivesample.navigation.LargeFlexibleAppBar
 import com.itlifelang.m3expressivesample.navigation.MediumFlexibleAppBar
 import com.itlifelang.m3expressivesample.navigation.SearchWithAppBar
 import com.itlifelang.m3expressivesample.navigation.ButtonGroup
+import com.itlifelang.m3expressivesample.navigation.Card
 import com.itlifelang.m3expressivesample.navigation.ExtendedFabButton
 import com.itlifelang.m3expressivesample.navigation.FabButton
 import com.itlifelang.m3expressivesample.navigation.FabMenu
@@ -38,6 +40,7 @@ import com.itlifelang.m3expressivesample.navigation.LoadingIndicator
 import com.itlifelang.m3expressivesample.navigation.NavigationBar
 import com.itlifelang.m3expressivesample.navigation.NavigationRail
 import com.itlifelang.m3expressivesample.navigation.ProgressIndicator
+import com.itlifelang.m3expressivesample.navigation.Slider
 import com.itlifelang.m3expressivesample.navigation.SmallAppBar
 import com.itlifelang.m3expressivesample.util.actions
 
@@ -136,6 +139,12 @@ private val widgets: Map<String, List<AppNavKey>> = mapOf(
         MediumFlexibleAppBar("Medium flexible"),
         LargeFlexibleAppBar("Large flexible")
     ),
+    "Badge" to listOf(
+        Badge("Badge")
+    ),
+    "Card" to listOf(
+        Card("Card")
+    ),
     "Button" to listOf(
         ButtonType("Button type"),
         SplitButton("Split button"),
@@ -153,5 +162,8 @@ private val widgets: Map<String, List<AppNavKey>> = mapOf(
     ),
     "Navigation rail" to listOf(
         NavigationRail("Navigation rail")
+    ),
+    "Slider" to listOf(
+        Slider("Slider")
     )
 )
