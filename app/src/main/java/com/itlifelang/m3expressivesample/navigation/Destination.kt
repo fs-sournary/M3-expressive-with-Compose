@@ -21,6 +21,14 @@ data class Badge(val title: String): AppNavKey(title)
 @Serializable
 data class Card(val title: String): AppNavKey(title)
 
+// Carousel
+@Serializable
+data class Carousel(val title: String): AppNavKey(title)
+
+// Checkbox
+@Serializable
+data class Checkbox(val title: String): AppNavKey(title)
+
 @Serializable
 data class SmallAppBar(val title: String): AppNavKey(title)
 

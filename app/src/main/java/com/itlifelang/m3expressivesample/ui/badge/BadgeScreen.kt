@@ -21,8 +21,9 @@ import androidx.compose.ui.unit.dp
 /**
  * Example for Badge composable in M3 Expressive.
  *
- * Check official documentation for more details: [M3 Expressive: Badge](https://m3.material.io/components/badges/specs),
- * [Badge](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#Badge),
+ * Check official documentation for more details:
+ * - [M3 Expressive: Badge](https://m3.material.io/components/badges/specs),
+ * - [Badge](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#Badge)
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

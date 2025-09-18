@@ -22,6 +22,8 @@ import com.itlifelang.m3expressivesample.navigation.Badge
 import com.itlifelang.m3expressivesample.navigation.ButtonGroup
 import com.itlifelang.m3expressivesample.navigation.ButtonType
 import com.itlifelang.m3expressivesample.navigation.Card
+import com.itlifelang.m3expressivesample.navigation.Carousel
+import com.itlifelang.m3expressivesample.navigation.Checkbox
 import com.itlifelang.m3expressivesample.navigation.ExtendedFabButton
 import com.itlifelang.m3expressivesample.navigation.FabButton
 import com.itlifelang.m3expressivesample.navigation.FabMenu
@@ -46,6 +48,8 @@ import com.itlifelang.m3expressivesample.ui.button.FabButtonScreen
 import com.itlifelang.m3expressivesample.ui.button.FabMenuScreen
 import com.itlifelang.m3expressivesample.ui.button.SplitButtonScreen
 import com.itlifelang.m3expressivesample.ui.card.CardScreen
+import com.itlifelang.m3expressivesample.ui.carousel.CarouselScreen
+import com.itlifelang.m3expressivesample.ui.checkbox.CheckboxScreen
 import com.itlifelang.m3expressivesample.ui.home.HomeScreen
 import com.itlifelang.m3expressivesample.ui.indicator.LoadingIndicatorScreen
 import com.itlifelang.m3expressivesample.ui.indicator.ProgressIndicatorScreen
@@ -109,6 +113,16 @@ class MainActivity : ComponentActivity() {
                         // Card
                         entry<Card> {
                             CardScreen()
+                        }
+
+                        // Carousel
+                        entry<Carousel> {
+                            CarouselScreen()
+                        }
+
+                        // Checkbox
+                        entry<Checkbox> {
+                            CheckboxScreen()
                         }
 
                         // Button

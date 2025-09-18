@@ -24,8 +24,9 @@ import androidx.compose.ui.unit.dp
 /**
  * Example for Card composable in M3 Expressive.
  *
- * Check official documentation for more details: [M3 Expressive: Card](https://m3.material.io/components/cards/specs),
- * [Card](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#Card),
+ * Check official documentation for more details:
+ * - [M3 Expressive: Card](https://m3.material.io/components/cards/specs)
+ * - [Card](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#Card),
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

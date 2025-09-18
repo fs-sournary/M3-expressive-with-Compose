@@ -33,6 +33,8 @@ import com.itlifelang.m3expressivesample.navigation.MediumFlexibleAppBar
 import com.itlifelang.m3expressivesample.navigation.SearchWithAppBar
 import com.itlifelang.m3expressivesample.navigation.ButtonGroup
 import com.itlifelang.m3expressivesample.navigation.Card
+import com.itlifelang.m3expressivesample.navigation.Carousel
+import com.itlifelang.m3expressivesample.navigation.Checkbox
 import com.itlifelang.m3expressivesample.navigation.ExtendedFabButton
 import com.itlifelang.m3expressivesample.navigation.FabButton
 import com.itlifelang.m3expressivesample.navigation.FabMenu
@@ -144,6 +146,12 @@ private val widgets: Map<String, List<AppNavKey>> = mapOf(
     ),
     "Card" to listOf(
         Card("Card")
+    ),
+    "Carousel" to listOf(
+        Carousel("Carousel")
+    ),
+    "Checkbox" to listOf(
+        Checkbox("Checkbox")
     ),
     "Button" to listOf(
         ButtonType("Button type"),
